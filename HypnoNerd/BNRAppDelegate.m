@@ -8,6 +8,8 @@
 
 #import "BNRAppDelegate.h"
 #import "BNRHypnosisViewController.h"
+#import "BNRReminderViewController.h"
+#import "BNRQuizViewController.h"
 
 @implementation BNRAppDelegate
 
@@ -16,10 +18,22 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     BNRHypnosisViewController *hvc = [[BNRHypnosisViewController alloc] init];
-    self.window.rootViewController = hvc;
+    /*
+    NSBundle *appBundle = [NSBundle mainBundle];
+    BNRReminderViewController *rvc = [[BNRReminderViewController alloc] initWithNibName:@"BNRReminderViewController" bundle:appBundle];
+     */
+    BNRReminderViewController *rvc = [[BNRReminderViewController alloc] init];
+    
+    BNRQuizViewController *qvc = [[BNRQuizViewController alloc] init];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[hvc, rvc, qvc];
+    
+    self.window.rootViewController = tabBarController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     
     /* note
      當 app 啟動之後

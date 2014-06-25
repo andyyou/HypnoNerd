@@ -21,6 +21,10 @@
 		A1953584195A528B008FF5F9 /* HypnoNerdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1953583195A528B008FF5F9 /* HypnoNerdTests.m */; };
 		A195358F195A5339008FF5F9 /* BNRHypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = A195358E195A5339008FF5F9 /* BNRHypnosisView.m */; };
 		A1953592195A5B0F008FF5F9 /* BNRHypnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1953591195A5B0F008FF5F9 /* BNRHypnosisViewController.m */; };
+		A195359A195A9102008FF5F9 /* BNRReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1953599195A9102008FF5F9 /* BNRReminderViewController.m */; };
+		A195359C195A9269008FF5F9 /* BNRReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A195359B195A9269008FF5F9 /* BNRReminderViewController.xib */; };
+		A1A578CA195AF5EE00111BFE /* BNRQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A578C8195AF5EE00111BFE /* BNRQuizViewController.m */; };
+		A1A578CB195AF5EE00111BFE /* BNRQuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1A578C9195AF5EE00111BFE /* BNRQuizViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,12 @@
 		A195358E195A5339008FF5F9 /* BNRHypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRHypnosisView.m; sourceTree = "<group>"; };
 		A1953590195A5B0F008FF5F9 /* BNRHypnosisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRHypnosisViewController.h; sourceTree = "<group>"; };
 		A1953591195A5B0F008FF5F9 /* BNRHypnosisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRHypnosisViewController.m; sourceTree = "<group>"; };
+		A1953598195A9102008FF5F9 /* BNRReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRReminderViewController.h; sourceTree = "<group>"; };
+		A1953599195A9102008FF5F9 /* BNRReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRReminderViewController.m; sourceTree = "<group>"; };
+		A195359B195A9269008FF5F9 /* BNRReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRReminderViewController.xib; sourceTree = "<group>"; };
+		A1A578C7195AF5EE00111BFE /* BNRQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRQuizViewController.h; sourceTree = "<group>"; };
+		A1A578C8195AF5EE00111BFE /* BNRQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRQuizViewController.m; sourceTree = "<group>"; };
+		A1A578C9195AF5EE00111BFE /* BNRQuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRQuizViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +123,9 @@
 		A1953564195A528B008FF5F9 /* HypnoNerd */ = {
 			isa = PBXGroup;
 			children = (
+				A1A578C7195AF5EE00111BFE /* BNRQuizViewController.h */,
+				A1A578C8195AF5EE00111BFE /* BNRQuizViewController.m */,
+				A1A578C9195AF5EE00111BFE /* BNRQuizViewController.xib */,
 				A195356D195A528B008FF5F9 /* BNRAppDelegate.h */,
 				A195356E195A528B008FF5F9 /* BNRAppDelegate.m */,
 				A1953570195A528B008FF5F9 /* Images.xcassets */,
@@ -121,6 +134,9 @@
 				A195358E195A5339008FF5F9 /* BNRHypnosisView.m */,
 				A1953590195A5B0F008FF5F9 /* BNRHypnosisViewController.h */,
 				A1953591195A5B0F008FF5F9 /* BNRHypnosisViewController.m */,
+				A1953598195A9102008FF5F9 /* BNRReminderViewController.h */,
+				A1953599195A9102008FF5F9 /* BNRReminderViewController.m */,
+				A195359B195A9269008FF5F9 /* BNRReminderViewController.xib */,
 			);
 			path = HypnoNerd;
 			sourceTree = "<group>";
@@ -230,6 +246,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A578CB195AF5EE00111BFE /* BNRQuizViewController.xib in Resources */,
+				A195359C195A9269008FF5F9 /* BNRReminderViewController.xib in Resources */,
 				A1953569195A528B008FF5F9 /* InfoPlist.strings in Resources */,
 				A1953571195A528B008FF5F9 /* Images.xcassets in Resources */,
 			);
@@ -252,7 +270,9 @@
 			files = (
 				A1953592195A5B0F008FF5F9 /* BNRHypnosisViewController.m in Sources */,
 				A195356B195A528B008FF5F9 /* main.m in Sources */,
+				A1A578CA195AF5EE00111BFE /* BNRQuizViewController.m in Sources */,
 				A195356F195A528B008FF5F9 /* BNRAppDelegate.m in Sources */,
+				A195359A195A9102008FF5F9 /* BNRReminderViewController.m in Sources */,
 				A195358F195A5339008FF5F9 /* BNRHypnosisView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +470,7 @@
 				A1953589195A528B008FF5F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A195358A195A528B008FF5F9 /* Build configuration list for PBXNativeTarget "HypnoNerdTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +479,7 @@
 				A195358C195A528B008FF5F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
