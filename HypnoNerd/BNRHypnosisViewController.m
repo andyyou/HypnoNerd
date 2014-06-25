@@ -8,7 +8,9 @@
 
 #import "BNRHypnosisViewController.h"
 #import "BNRHypnosisView.h"
-
+@interface BNRHypnosisViewController()
+@property (strong, nonatomic) BNRHypnosisView *hypnosisView;
+@end
 @implementation BNRHypnosisViewController
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,14 +26,43 @@
 
 - (void)loadView
 {
-    BNRHypnosisView *view = [[BNRHypnosisView alloc] init];
-    self.view = view;
+    _hypnosisView = [[BNRHypnosisView alloc] init];
+    NSArray *options = @[@"Red", @"Green", @"Blue"];
+    UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:options];
+    segment.frame = CGRectMake(50, 30, 200, 38);
+    [segment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
+    [_hypnosisView addSubview:segment];
+    self.view = _hypnosisView;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     NSLog(@"%@", @"BNRHypnosisViewController");
+}
+
+- (void)segmentAction:(id)sender {
+    switch ([sender selectedSegmentIndex]) {
+        case 0: {
+            NSLog(@"Red");
+            [_hypnosisView setCircleColor:[UIColor redColor]];
+            
+        }
+            break;
+        case 1: {
+            NSLog(@"Green");
+            [_hypnosisView setCircleColor:[UIColor greenColor]];
+        }
+            break;
+        case 2: {
+            NSLog(@"Blue");
+            [_hypnosisView setCircleColor:[UIColor blueColor]];
+        }
+            break;
+        default:
+            break;
+    }
+    
 }
 
 @end

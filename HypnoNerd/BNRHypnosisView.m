@@ -9,7 +9,7 @@
 #import "BNRHypnosisView.h"
 @interface BNRHypnosisView()
 #pragma mark - interface and delegate
-@property (strong, nonatomic) UIColor *circleColor;
+
 @end
 
 @implementation BNRHypnosisView
