@@ -32,6 +32,12 @@
             - subviews(UIView, UIScrollView, ..etc) e.g. [self addSubview: view]
             - drawRect: 方法
             - 設定 application.rootViewController
+                * rootViewController 有一個 (UIView *) view 屬性必須要加入元素或載入 nib 才有畫面
+                * 也可以複寫 UIViewController 本身類別的方法 loadView 實際上執行的動作就是 self.view = [Your UIView Object]
+                * UIViewController 類別中最重要的屬性就是 UIViewController.view 型別為 UIView
+                * UIViewController 有兩種方式來建立畫面
+                    - 1. 程式碼
+                    - 2. nib, xib
         以上處理都會在 Delegate 事件處理 e.g. willFinishLaunchingWithOptions:, didFinishLaunchingWithOptions:
      5. 完成初始化進入 applicationDidBecomeActive:
      6. 進入 Run Loop 等待處理事件
