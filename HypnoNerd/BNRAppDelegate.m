@@ -11,9 +11,7 @@
 #import "BNRReminderViewController.h"
 #import "BNRQuizViewController.h"
 #import "BNRHypnosisView.h"
-@interface BNRAppDelegate() <UIScrollViewDelegate>
-
-@property (nonatomic, weak) BNRHypnosisView *hypnosisView;
+@interface BNRAppDelegate()
 
 @end
 
