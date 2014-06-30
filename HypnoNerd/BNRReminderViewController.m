@@ -10,6 +10,8 @@
 
 @interface BNRReminderViewController()
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UIButton *testButton;
+@property (weak, nonatomic) IBOutlet UIButton *clock;
 @end
 @implementation BNRReminderViewController
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -39,6 +41,9 @@
     [super viewDidLoad];
     NSLog(@"%@", @"BNRReminderViewController");
     self.datePicker.date = [[NSDate alloc] initWithTimeInterval:86400 sinceDate:[NSDate date]];
+//    self.testButton.titleLabel.text = @"Changed";
+//    UIButton *btn = [self.view valueForKey:@"Ch0-2I-zFV"];
+//    [btn setTitle:@"Changed" forState:UIControlStateNormal];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -48,4 +53,9 @@
     
 }
 
+- (IBAction)setClock:(id)sender
+{
+    NSLog(@"fake set clock");
+    [self.clock setTitle:@"Clicked" forState:UIControlStateNormal];
+}
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "BNRHypnosisView.h"
-@interface BNRHypnosisView()
+@interface BNRHypnosisView() <UIScrollViewDelegate>
 #pragma mark - interface and delegate
 
 @end
@@ -20,6 +20,8 @@
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         self.circleColor = [UIColor lightGrayColor];
+        fido = @"fido";
+        _fido = @"_fido";
     }
     return self;
 }
@@ -50,6 +52,8 @@
     
     UIColor *color = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
     self.circleColor = color;
+    // 測試如果 fido, _fido instance variable 都有的時候先吃 _fido.
+    NSLog(@"%@", [self valueForKey:@"fido"]);
 }
 
 #pragma mark - properties methods

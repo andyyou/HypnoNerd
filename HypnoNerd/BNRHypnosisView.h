@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BNRHypnosisView : UIView
+@interface BNRHypnosisView : UIView {
+    NSString *fido;
+    NSString *_fido;
+
+}
+
 @property (strong, nonatomic) UIColor *circleColor;
 @end

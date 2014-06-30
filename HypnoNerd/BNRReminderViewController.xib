@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BNRReminderViewController">
             <connections>
+                <outlet property="clock" destination="v4W-Op-Qg9" id="N1a-yF-hM7"/>
                 <outlet property="datePicker" destination="Ch0-2I-zFV" id="SP9-qN-Rna"/>
                 <outlet property="view" destination="bKZ-5J-46R" id="Dz3-4W-4f5"/>
             </connections>
@@ -18,7 +19,7 @@
                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ch0-2I-zFV">
                     <rect key="frame" x="0.0" y="78" width="320" height="162"/>
                     <date key="date" timeIntervalSinceReferenceDate="425366155.71451199">
-                        <!--<__NSDate Class=2014-06-25 05:15:55 +0000 timeInterval=425366155.714512 ISO8601=2014-06-25T13:15:55.715+0800>-->
+                        <!--2014-06-25 05:15:55 +0000-->
                     </date>
                 </datePicker>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNC-yC-vhq">
@@ -28,6 +29,23 @@
                     </state>
                     <connections>
                         <action selector="addReminder:" destination="-1" eventType="touchUpInside" id="2ek-3C-5NA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="testButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HG-hT-cR7">
+                    <rect key="frame" x="126" y="389" width="69" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Other test">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4W-Op-Qg9">
+                    <rect key="frame" x="137" y="440" width="40" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Clock">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="setClock:" destination="-1" eventType="touchUpInside" id="X3P-oa-glR"/>
                     </connections>
                 </button>
             </subviews>
